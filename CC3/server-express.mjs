@@ -6,8 +6,14 @@ const port = 8000;
 
 const app = express();
 
-app.get(["/", "/index.html"], async function (request, response, next) {
-  response.sendFile("index.html", { root: "./" });
+if (app.get("env") === "development") {
+    app.use(morgan("dev"));
+  }
+
+app.use(express.static("static"));
+
+app.get(["/", "static/index.html"], async function (request, response, next) {
+  response.sendFile("static/index.html", { root: "./" });
 });
 
 app.get("/random/:nb", async function (request, response, next) {
