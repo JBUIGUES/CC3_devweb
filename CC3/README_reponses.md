@@ -121,8 +121,29 @@ rien n'a change
 **Question 2.4** quand l'événement `listening` est-il déclenché ?
 l'événement "listening" sera déclenché lorsque le serveur sera en cours d'écoute sur le port 8000 de l'adresse "localhost".
 
+
 **Question 2.5** indiquer quelle est l'option (activée par défaut) qui redirige `/` vers `/index.html` ?
+Cette fonctionnalité est appelée la "redirection par défaut" et elle est activée pour assurer que les requêtes vers le répertoire racine ("/") sont gérées en redirigeant automatiquement vers la page par défaut, qui est souvent "index.html".
+
 
 **Question 2.6** visiter la page d'accueil puis rafraichir (Ctrl+R) et _ensuite_ **forcer** le rafraichissement (Ctrl+Shift+R). Quels sont les codes HTTP sur le fichier `style.css` ? Justifier.
+GET http://localhost:8000/static/style.css net::ERR_ABORTED 404 (Not Found)
+favicon.ico:1     GET http://localhost:8000/favicon.ico 404 (Not Found)
+
+css:
+Request URL:http://localhost:8000/static/style.css
+Request Method:GET
+Status Code:404 Not Found
+Remote Address:[::1]:8000
+Referrer Policy:strict-origin-when-cross-origin
+
+Connection:keep-alive
+Content-Type:text/html
+Date:Thu, 28 Sep 2023 10:54:40 GMT
+Keep-Alive:timeout=5
+Transfer-Encoding:chunked
+
+
+
 
 **Question 2.7** vérifier que l'affichage change bien entre le mode _production_ et le mode _development_.
