@@ -144,6 +144,29 @@ Keep-Alive:timeout=5
 Transfer-Encoding:chunked
 
 
-
-
 **Question 2.7** vérifier que l'affichage change bien entre le mode _production_ et le mode _development_.
+
+PS C:\Users\jolan\OneDrive\Documents\devweb\CC3> npm run express-dev 
+
+> devweb-tp5@1.0.0 express-dev
+> cross-env NODE_ENV=development nodemon devweb-tp5/server-http.mjs
+
+[nodemon] 3.0.1
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node devweb-tp5/server-http.mjs`
+NODE_ENV = development
+Server is running on http://localhost:8000
+rs
+[nodemon] starting `node devweb-tp5/server-http.mjs`
+NODE_ENV = development
+Server is running on http://localhost:8000
+Terminer le programme de commandes (O/N) ? o
+PS C:\Users\jolan\OneDrive\Documents\devweb\CC3> npm run express-prod
+
+> devweb-tp5@1.0.0 express-prod
+> cross-env NODE_ENV=production node devweb-tp5/server-http.mjs
+
+NODE_ENV = production
+Server is running on http://localhost:8000
