@@ -10,7 +10,7 @@ async function requestListener(request, response) {
     const urlParts = request.url.split("/");
 
     if (urlParts[1] === "" || urlParts[1] === "index.html") {
-      const contents = await fs.readFile("devweb-tp5/index.html", "utf8");
+      const contents = await fs.readFile("devweb-tp5/static/index.html", "utf8");
       response.writeHead(200);
       return response.end(contents);
     }
