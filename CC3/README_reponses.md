@@ -66,21 +66,63 @@ NODE_ENV=development est utilisé pour le développement actif de l'application,
 Elles rendent toutes 404: NOT FOUND sauf "http://localhost:8000/random.html" qui rend "40"
 
 **Question 2.1** donner les URL des documentations de chacun des modules installés par la commande précédente.
+https://tidelift.com/funding/github/npm/loglevel
+├─┬ https://opencollective.com/eslint
+│ ├── https://github.com/sponsors/nzakas
+│ ├── https://github.com/sponsors/epoberezkin
+│ ├─┬ https://github.com/chalk/chalk?sponsor=1
+│ │ └── https://github.com/chalk/ansi-styles?sponsor=1
+│ ├── https://github.com/sponsors/feross
+│ └── https://github.com/sponsors/isaacs
+├─┬ https://github.com/sindresorhus/
+│ └── https://github.com/sponsors/sibiraj-s
+├─┬ https://opencollective.com/nodemon
+│ └── https://paulmillr.com/funding/
+├── https://github.com/prettier/prettier?sponsor=1
+├── https://github.com/sponsors/ljharb
+├── https://opencollective.com/typescript-eslint
+└── https://github.com/sponsors/mysticatea
+
 
 **Question 2.2** vérifier que les trois routes fonctionnent.
+PS C:\Users\jolan\OneDrive\Documents\devweb\CC3> npm run express-prod
+
+> devweb-tp5@1.0.0 express-prod
+> cross-env NODE_ENV=production node devweb-tp5/server-http.mjs
+
+NODE_ENV = production
+Server is running on http://localhost:8000
+^C^CTerminer le programme de commandes (O/N) ? o
+PS C:\Users\jolan\OneDrive\Documents\devweb\CC3> npm run express-dev 
+
+> devweb-tp5@1.0.0 express-dev
+> cross-env NODE_ENV=development nodemon devweb-tp5/server-http.mjs
+
+[nodemon] 3.0.1
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node devweb-tp5/server-http.mjs`
+NODE_ENV = development
+Server is running on http://localhost:8000
+
+et les 3 types de pages répondent normalement.
+
 
 **Question 2.3** lister les en-têtes des réponses fournies par Express. Lesquelles sont nouvelles par rapport au serveur HTTP ?
+Connection:keep-alive
+Content-Type:text/html
+Date:Thu, 28 Sep 2023 10:04:50 GMT
+Keep-Alive:timeout=5
+Transfer-Encoding:chunked
+rien n'a change
+
 
 **Question 2.4** quand l'événement `listening` est-il déclenché ?
+l'événement "listening" sera déclenché lorsque le serveur sera en cours d'écoute sur le port 8000 de l'adresse "localhost".
 
 **Question 2.5** indiquer quelle est l'option (activée par défaut) qui redirige `/` vers `/index.html` ?
 
 **Question 2.6** visiter la page d'accueil puis rafraichir (Ctrl+R) et _ensuite_ **forcer** le rafraichissement (Ctrl+Shift+R). Quels sont les codes HTTP sur le fichier `style.css` ? Justifier.
 
 **Question 2.7** vérifier que l'affichage change bien entre le mode _production_ et le mode _development_.
-
-## Conclusion
-
-À ce stade du tutoriel, vous avez vues les principales étapes de la création d'une application Node.js/Express.
-Ces étapes seront déjà réalisées dans le projet de départ du [TP6](../TP6).
-
