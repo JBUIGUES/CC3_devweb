@@ -53,12 +53,17 @@ async function requestListener(_request, response) {
 }
 '''
 
+
 **Question 1.6** indiquer ce que cette commande a modifié dans votre projet.
+Elle a ajouté les fichiers nodes et le package.
+
 
 **Question 1.7** quelles sont les différences entre les scripts `http-dev` et `http-prod` ?
+NODE_ENV=development est utilisé pour le développement actif de l'application, tandis que NODE_ENV=production est utilisé pour la mise en production de l'application.
+
 
 **Question 1.8** donner les codes HTTP reçus par votre navigateur pour chacune des quatre pages précédentes.
-
+Elles rendent toutes 404: NOT FOUND sauf "http://localhost:8000/random.html" qui rend "40"
 
 **Question 2.1** donner les URL des documentations de chacun des modules installés par la commande précédente.
 
